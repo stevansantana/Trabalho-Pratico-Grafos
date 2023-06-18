@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\buscabinaria.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\escolhercomsempeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\escolhergraforepresentacao.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\escolhermodorepresentacao.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\lergrafo.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\lergrafocompeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\lergrafosempeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\listaadjacenciacompeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\listaadjacenciasempeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\matrizadjacenciacompeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\main.c
+	"library.h"
+
+1687051776 c:\users\steva\downloads\trabalho-2o-grafos\library.h
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\matrizadjacenciasempeso.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\menu.c
+	<stdio.h>
+	<stdlib.h>
+
+1687051733 source:c:\users\steva\downloads\trabalho-2o-grafos\saida.c
+	<stdio.h>
+	<stdlib.h>
+
