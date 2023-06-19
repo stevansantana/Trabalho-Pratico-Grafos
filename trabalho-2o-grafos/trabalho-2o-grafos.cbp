@@ -34,10 +34,23 @@
 		<Unit filename="buscaBinaria.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="buscaEmLargura.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="buscaEmProfundidade.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="escolherComSemPeso.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="escolherGrafoBusca.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="escolherGrafoRepresentacao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="escolherModoBusca.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="escolherModoRepresentacao.c">

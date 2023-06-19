@@ -4,6 +4,10 @@
 #include <stdlib.h>
 
 int buscaBinaria(int A[], int x, int inicio, int fim);
+void buscaEmLargura(FILE *arquivo);
+void buscaEmProfundidade(FILE *arquivo);
+void escolherGrafoBusca();
+void escolherModoBusca(FILE *Arquivo);
 void escolherComSemPeso(FILE *arquivo);
 void escolherGrafoRepresentacao();
 void escolherModoRepresentacao(FILE *arquivo);

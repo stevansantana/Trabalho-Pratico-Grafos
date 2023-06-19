@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void escolherGrafoRepresentacao()
+void escolherGrafoBusca()
 {
     system("cls");
     int x;
@@ -10,12 +10,12 @@ void escolherGrafoRepresentacao()
     {
         printf("\t\t\t\t\t\tMENU - ESCOLHA DE GRAFOS\n");
         printf("Aperte:\n\n");
-        printf("0 - Para sair da representacao de grafos e finalizar o programa.\n");
-        printf("1 - Para representar o grafo_1.txt.\n");
-        printf("2 - Para representar o grafo_2.txt.\n");
-        printf("3 - Para representar o grafo_3.txt.\n");
-        printf("4 - Para representar o grafo_4.txt.\n");
-        printf("5 - Para representar o grafo-teste.txt.\n");
+        printf("0 - Para sair do percorrimento de grafos e finalizar o programa.\n");
+        printf("1 - Para percorrer o grafo_1.txt.\n");
+        printf("2 - Para percorrer o grafo_2.txt.\n");
+        printf("3 - Para percorrer o grafo_3.txt.\n");
+        printf("4 - Para percorrer o grafo_4.txt.\n");
+        printf("5 - Para percorrer o grafo-teste.txt.\n");
 
         scanf("%i", &x);
 
@@ -37,12 +37,12 @@ void escolherGrafoRepresentacao()
 
                 if(grafo1 != NULL)
                 {
-                    escolherModoRepresentacao(grafo1);
+                    escolherModoBusca(grafo1);
                 }
                 else
                 {
                     system("cls");
-                    printf("Erro ao abrir o arquivo grafo_2.txt!\n");
+                    printf("Erro ao abrir o arquivo grafo_1.txt!\n");
                     system("pause");
                     system("cls");
                     exit(1);
@@ -56,7 +56,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo2 != NULL)
                 {
-                    escolherModoRepresentacao(grafo2);
+                    escolherModoBusca(grafo2);
                 }
                 else
                 {
@@ -75,7 +75,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo3 != NULL)
                 {
-                    escolherModoRepresentacao(grafo3);
+                    escolherModoBusca(grafo3);
                 }
                 else
                 {
@@ -94,7 +94,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo4 != NULL)
                 {
-                    escolherModoRepresentacao(grafo4);
+                    escolherModoBusca(grafo4);
                 }
                 else
                 {
@@ -113,12 +113,12 @@ void escolherGrafoRepresentacao()
 
                 if(grafoTeste != NULL)
                 {
-                    escolherModoRepresentacao(grafoTeste);
+                    escolherModoBusca(grafoTeste);
                 }
                 else
                 {
                     system("cls");
-                    printf("Erro ao abrir o arquivo grafo_4.txt!\n");
+                    printf("Erro ao abrir o arquivo grafo-teste.txt!\n");
                     system("pause");
                     system("cls");
                     exit(1);

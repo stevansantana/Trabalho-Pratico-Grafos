@@ -39,6 +39,7 @@ void menu()
             }
             case 3:
             {
+                escolherGrafoBusca();
                 break;
             }
             case 4:
