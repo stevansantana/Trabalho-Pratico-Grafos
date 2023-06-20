@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void escolherModoRepresentacao(FILE *arquivo)
+void escolherParesTodosMST(FILE *arquivo)
 {
     system("cls");
     int x;
@@ -9,11 +9,11 @@ void escolherModoRepresentacao(FILE *arquivo)
     do
     {
         printf("Aperte:\n\n");
-        printf("0 - Para sair da escolha de representacao e finalizar o programa!\n");
-        printf("1 - Para representar pela matriz de adjacencia com grafo com peso.\n");
-        printf("2 - Para representar pela matriz de adjacencia com grafo sem peso.\n");
-        printf("3 - Para representar pela lista de adjacencia com grafo com peso.\n");
-        printf("4 - Para representar pela lista de adjacencia com grafo sem peso.\n");
+        printf("0 - Para sair da escolha de caminho minimo e finalizar o programa!\n");
+        printf("1 - Para encontrar distancia e caminho com largura usando pares de vertice em grafo sem peso.\n");
+        printf("2 - Para encontrar distancia e caminho com dijkstra usando pares em grafo com peso.\n");
+        printf("3 - Para encontrar distancia e caminho com largura usando todos os vertices em grafo sem peso.\n");
+        printf("4 - Para encontrar distancia e caminho com dijkstra usando todos os vertices em grafo com peso.\n");
 
         scanf("%d", &x);
         switch(x)
@@ -21,7 +21,7 @@ void escolherModoRepresentacao(FILE *arquivo)
         case 0:
             {
                 system("cls");
-                printf("Nenhum representacao foi escolhida! Programa finalizado!\n");
+                printf("Nenhuma opcao de distancia foi escolhida! Programa finalizado!\n");
                 system("pause");
                 system("cls");
                 exit(0);
@@ -29,22 +29,22 @@ void escolherModoRepresentacao(FILE *arquivo)
             }
         case 1:
             {
-                matrizAdjancenciaComPeso(arquivo);
+                distanciaMSTBuscaEmLargura(arquivo);
                 break;
             }
         case 2:
             {
-                matrizAdjancenciaSemPeso(arquivo);
+                distanciaMSTDijkstra(arquivo);
                 break;
             }
         case 3:
             {
-                listaAdjacenciaComPeso(arquivo);
+                distanciaTodosBuscaEmLargura(arquivo);
                 break;
             }
         case 4:
             {
-                listaAdjacenciaSemPeso(arquivo);
+                distanciaTodosDijkstra(arquivo);
                 break;
             }
         default:

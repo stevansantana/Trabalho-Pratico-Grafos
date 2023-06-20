@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 void buscaEmLargura(FILE *arquivo)
 {
@@ -20,9 +19,9 @@ void buscaEmLargura(FILE *arquivo)
     }
 
     // Vetor de visitados
-    bool *visitados = (bool *)malloc(numVertices * sizeof(bool));
+    int *visitados = (int *)malloc(numVertices * sizeof(int));
     for (int i = 0; i < numVertices; i++)
-        visitados[i] = false;
+        visitados[i] = 0;
 
     // Vetor de níveis
     int *niveis = (int *)malloc(numVertices * sizeof(int));
@@ -40,11 +39,11 @@ void buscaEmLargura(FILE *arquivo)
     int tras = 0;
 
     int verticeInicial;
-    printf("Digite o vertice inicial para a busca em largura: ");
+    printf("Digite o vértice inicial para a busca em largura: ");
     scanf("%d", &verticeInicial);
 
     // Marcar o vértice inicial como visitado e definir seu nível como 0
-    visitados[verticeInicial] = true;
+    visitados[verticeInicial] = 1;
     niveis[verticeInicial] = 0;
     fila[tras++] = verticeInicial;
 
@@ -55,10 +54,8 @@ void buscaEmLargura(FILE *arquivo)
         return;
     }
 
-    // Cabeçalho do arquivo de saída
     fprintf(arquivoSaida, "\nBusca em Largura:\n");
-    fprintf(arquivoSaida, "Vertice\t\tNivel\t\tPai\n");
-    fprintf(arquivoSaida, "%d\t\t%d\t\t-\n", verticeInicial, 0);
+    fprintf(arquivoSaida, "Vértice: %d - Nível: %d - Pai: -\n", verticeInicial, 0);
 
     while (frente < tras)
     {
@@ -67,9 +64,9 @@ void buscaEmLargura(FILE *arquivo)
         // Percorrer os vizinhos do vértice atual
         for (int i = 0; i < numVertices; i++)
         {
-            if (matriz[verticeAtual][i] && !visitados[i])
+            if (matriz[verticeAtual][i] && visitados[i] == 0)
             {
-                visitados[i] = true;
+                visitados[i] = 1;
                 niveis[i] = niveis[verticeAtual] + 1;
                 pais[i] = verticeAtual;
                 fila[tras++] = i;

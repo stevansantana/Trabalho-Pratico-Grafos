@@ -150,7 +150,7 @@ void lerGrafoSemPeso(FILE *arquivo)
         {
             printf("Intervalo invalido!");
         }
-        if(verificaExistencia==0)
+        if(verificaExistencia==1)
         {
             int elemento = grauVertice[k], qtdElemento=0;
             while(elemento == grauVertice[k])

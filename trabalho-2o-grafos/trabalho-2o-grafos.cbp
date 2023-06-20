@@ -40,12 +40,26 @@
 		<Unit filename="buscaEmProfundidade.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="distanciaMSTBuscaEmLargura.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="distanciaMSTDijkstra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="distanciaTodosBuscaEmLargura.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="distanciaTodosDijkstra.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="escolherComSemPeso.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="escolherGrafoBusca.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="escolherGrafoDistancia.c">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="escolherGrafoRepresentacao.c">
 			<Option compilerVar="CC" />
@@ -54,6 +68,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="escolherModoRepresentacao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="escolherParesTodosMST.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lerGrafo.c">

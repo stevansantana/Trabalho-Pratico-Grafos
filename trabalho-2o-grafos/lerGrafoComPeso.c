@@ -5,111 +5,114 @@ void lerGrafoComPeso(FILE *arquivo)
 {
     system("cls");
 
-    // Função para comparar vértices e graus
+    //Função para comparar vértices e graus
     int compare(const void* a, const void* b) {
         return (*(int*)a - *(int*)b);
     }
 
-    // Estrutura que representa uma Aresta com peso
+    //Estrutura que representa uma Aresta sem peso
     typedef struct
     {
         int origem;
         int destino;
-        int peso;
 
     }Aresta;
 
-    int numVertice, numArestas = 0, c, cont = 0, aux = 0;
+    int numVertice, numArestas = 0, c, cont=0, aux=0;
     fscanf(arquivo, "%d", &numVertice);
 
-    // Percorre o arquivo e conta o número de arestas e o número de colunas
+    //Percorre o arquivo e conta o número de arestas e o número de colunas
     while ((c = fgetc(arquivo)) != EOF)
     {
         if (c == '\n')
         {
             numArestas++;
             aux = cont;
-            cont = 0;
+            cont=0;
         }
-        if (c != ' ' && c != '\n')
+        if(c != ' ' && c != '\n')
         {
             cont++;
         }
     }
     numArestas = numArestas - 1;
 
-    // Volta para o início do arquivo
+    //Volta para o inicio do arquivo
     fseek(arquivo, 0, SEEK_SET);
 
-    // Pula a primeira linha (Número de vértices)
+    //Pula a primeira linha(Número de vértices)
     char buffer[100];
     fgets(buffer, sizeof(buffer), arquivo);
 
-    // Aloca memória para um vetor de arestas
-    Aresta *arestas = (Aresta*)malloc(numArestas * sizeof(Aresta));
+    //Aloca memória para um vetor de arestas
+    Aresta *arestas = (Aresta*) malloc(numArestas * sizeof(Aresta));
     if (arestas == NULL) {
-        printf("Erro ao alocar memória para a leitura do grafo com peso.\n");
+        printf("Erro ao alocar memória para a leitura do grafo sem peso.\n");
         fclose(arquivo);
         exit(1);
     }
 
-    // Se colunas = 3 lê grafo com peso
-    if (aux == 3)
+    //Se colunas = 2 lê grafo sem peso
+    if(aux == 2)
     {
-        for (int i = 0; i < numArestas; i++)
+        system("cls");
+        printf("\nVoce esta tentando representar uma matriz de adjacencia sem peso no modo de representacao de matriz adjacencia com peso!\n");
+        printf("Reinicie o programa e escolha o modo de representacao de matriz de adjacencia sem peso!\n\n");
+        system("pause");
+        system("cls");
+        exit(1);
+    }
+    //Se colunas != 2 lê grafo com peso ignorando os pesos no momento da impressão
+    else
+    {
+        for(int i=0; i<numArestas; i++)
         {
-            int x, y, z;
-            fscanf(arquivo, "%d %d %d", &x, &y, &z);
+            int x, y;
+            double z;
+            fscanf(arquivo, "%d %d %f", &x, &y, &z);
 
             arestas[i].origem = x;
             arestas[i].destino = y;
-            arestas[i].peso = z;
         }
     }
-    // Se colunas != 3, não é possível ler o grafo com peso
-    else
+
+    //Lista de vértices
+    int *listaVertices = (int*)malloc((numArestas*2)*sizeof(int));
+
+    if(listaVertices==NULL)
     {
-        printf("Erro: O arquivo de entrada não está no formato esperado para um grafo com peso.\n");
-        fclose(arquivo);
+        printf("Erro ao alocar memoria para o array listaVertices");
+        system("pause");
         exit(1);
     }
 
-    // Lista de vértices
-    int *listaVertices = (int*)malloc((numArestas * 2) * sizeof(int));
-    if (listaVertices == NULL)
-    {
-        printf("Erro ao alocar memória para o array listaVertices.\n");
-        fclose(arquivo);
-        exit(1);
-    }
-
-    // Coloca todos os vértices em um array
-    int j = 0;
-    for (int i = 0; i < numArestas; i++)
+    //Coloca todos os vértices num array
+    int j=0;
+    for(int i=0; i<numArestas; i++)
     {
         listaVertices[j++] = arestas[i].origem;
         listaVertices[j++] = arestas[i].destino;
     }
 
     // Ordena o array de vértices
-    qsort(listaVertices, numArestas * 2, sizeof(int), compare);
+    qsort(listaVertices, numArestas*2, sizeof(int), compare);
 
-    // Array de graus dos vértices
-    int *grauVertice = (int*)malloc(numVertice * sizeof(int));
-    if (grauVertice == NULL)
+    // array de graus dos vértices
+    int *grauVertice = (int*)malloc(numVertice*sizeof(int));
+    if(grauVertice==NULL)
     {
-        printf("Erro ao alocar memória para o array grauVertice.\n");
-        fclose(arquivo);
+        printf("Erro ao alocar memoria para o array grauVertice");
+        system("pause");
         exit(1);
     }
 
-    // Coloca os graus dos vértices com repetição
-    int cont2 = 0;
-    for (int i = 0; i < numArestas * 2; i++)
+    //Coloca os graus dos vértices com repetição
+    int cont2=0;
+    for(int i=0; i<numArestas*2; i++)
     {
-        int elemento = listaVertices[i], qtdElemento = 0;
+        int elemento = listaVertices[i], qtdElemento=0;
 
-        while (elemento == listaVertices[i])
+        while(elemento == listaVertices[i])
         {
             qtdElemento++;
             i++;
@@ -120,65 +123,58 @@ void lerGrafoComPeso(FILE *arquivo)
     }
     qsort(grauVertice, numVertice, sizeof(int), compare);
 
-    int maiorGrau = grauVertice[numVertice - 1];
+    int maiorGrau = grauVertice[numVertice-1];
     int menorGrau = grauVertice[0];
 
-    // Soma os graus dos vértices e divide pelo número de vértices para obter o grau médio
-    double somaGraus = 0, qtdMedia = 0;
-    for (int i = 0; i < numVertice; i++)
+    // Soma os graus dos vértices e divide pelo número de vértices para o grau médio
+    double somaGraus=0, qtdMedia=0;
+    for(int i=0; i<numVertice; i++)
     {
-        somaGraus += grauVertice[i];
+        somaGraus+=grauVertice[i];
         qtdMedia++;
     }
-    double grauMedio = somaGraus / qtdMedia;
+    double grauMedio = somaGraus/qtdMedia;
 
-    double *listaDistribuicaoEmpirica = (double*)malloc(maiorGrau * sizeof(double));
-    if (listaDistribuicaoEmpirica == NULL)
-    {
-        printf("Erro ao alocar memoria para o array listaDistribuicaoEmpirica.\n");
-        fclose(arquivo);
-        exit(1);
-    }
+    double *listaDistruibuicaoEmpirica = (double*)malloc(maiorGrau*sizeof(double));
 
-    int k = 0, variavelExistente = 0, posicaoListaEmpirica = 0;
-    for (int i = menorGrau; i <= maiorGrau; i++)
+    int k=0, variavelExistente=0, posicaoListaEmpirica=0;
+    for(int i=menorGrau; i<=maiorGrau; i++)
     {
-        double distribuicaoEmpirica = 0;
+        double distribuicaoEmpirica=0;
 
         variavelExistente = i;
         int verificaExistencia = buscaBinaria(grauVertice, variavelExistente, 0, numVertice);
 
-        if (variavelExistente == -1)
+        if(variavelExistente == -1)
         {
-            printf("Intervalo invalido!\n");
-            fclose(arquivo);
-            exit(1);
+            printf("Intervalo invalido!");
         }
-        if (verificaExistencia == 0)
+        if(verificaExistencia==1)
         {
-            int elemento = grauVertice[k], qtdElemento = 0;
-            while (elemento == grauVertice[k])
+            int elemento = grauVertice[k], qtdElemento=0;
+            while(elemento == grauVertice[k])
             {
                 qtdElemento++;
                 k++;
             }
-            distribuicaoEmpirica = (double)qtdElemento / numVertice;
+            distribuicaoEmpirica = (double)qtdElemento/numVertice;
         }
         else
         {
             distribuicaoEmpirica = 0;
         }
-        listaDistribuicaoEmpirica[posicaoListaEmpirica] = distribuicaoEmpirica;
+        listaDistruibuicaoEmpirica[posicaoListaEmpirica] = distribuicaoEmpirica;
         posicaoListaEmpirica++;
     }
 
-    saida(numVertice, numArestas, menorGrau, maiorGrau, grauMedio, listaDistribuicaoEmpirica);
+    saida(numVertice, numArestas, menorGrau, maiorGrau, grauMedio, listaDistruibuicaoEmpirica);
     printf("Arquivo de saida gerado!\n");
 
     free(listaVertices);
     free(grauVertice);
     free(arestas);
-    free(listaDistribuicaoEmpirica);
+
+    free(listaDistruibuicaoEmpirica);
     fclose(arquivo);
 
     system("pause");
@@ -187,4 +183,5 @@ void lerGrafoComPeso(FILE *arquivo)
     system("pause");
     system("cls");
     exit(0);
+
 }

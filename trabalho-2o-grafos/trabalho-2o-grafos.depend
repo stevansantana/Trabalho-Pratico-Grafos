@@ -62,11 +62,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhercomsempeso.c
+1687051734 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhercomsempeso.c
 	<stdio.h>
 	<stdlib.h>
 
-1687154011 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhergraforepresentacao.c
+1687051734 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhergraforepresentacao.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -74,11 +74,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafo.c
+1687051734 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafo.c
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafosempeso.c
+1687134878 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafosempeso.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -86,22 +86,23 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\listaadjacenciasempeso.c
+1687179622 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\listaadjacenciasempeso.c
 	<stdio.h>
 	<stdlib.h>
 
 1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\main.c
 	"library.h"
 
-1687154036 c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\library.h
+1687292075 c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\library.h
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciacompeso.c
+1687207935 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciacompeso.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 
-1687152780 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\menu.c
+1687285579 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\menu.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -118,21 +119,43 @@
 	<stdlib.h>
 	<string.h>
 
-1687206846 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\buscaemlargura.c
+1687231557 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\buscaemlargura.c
 	<stdio.h>
 	<stdlib.h>
-	<stdbool.h>
 
 1687153493 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhermodobusca.c
 	<stdio.h>
 	<stdlib.h>
 
-1687205043 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\buscaemprofundidade.c
+1687231487 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\buscaemprofundidade.c
 	<stdio.h>
 	<stdlib.h>
-	<stdbool.h>
 
 1687154011 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhergrafobusca.c
+	<stdio.h>
+	<stdlib.h>
+
+1687285691 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhergrafodistancia.c
+	<stdio.h>
+	<stdlib.h>
+
+1687282229 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolherparestodosmst.c
+	<stdio.h>
+	<stdlib.h>
+
+1687289450 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\distanciamstbuscaemlargura.c
+	<stdio.h>
+	<stdlib.h>
+
+1687289390 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\distanciamstdijkstra.c
+	<stdio.h>
+	<stdlib.h>
+
+1687288171 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\distanciatodosbuscaemlargura.c
+	<stdio.h>
+	<stdlib.h>
+
+1687291744 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\distanciatodosdijkstra.c
 	<stdio.h>
 	<stdlib.h>
 

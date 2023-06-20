@@ -11,14 +11,14 @@ void matrizAdjancenciaComPeso(FILE *arquivo)
     fscanf(arquivo, "%d", &numVertice);
 
    // Aloca memória para a matriz
-    int **matriz = (int **)malloc(numVertice * sizeof(int *));
+    float **matriz = (float **)malloc(numVertice * sizeof(float *));
     if (matriz == NULL) {
         printf("Erro na alocação de memória.");
         return;
     }
 
     for (int i = 0; i < numVertice; i++) {
-        matriz[i] = (int *)malloc(numVertice * sizeof(int));
+        matriz[i] = (float *)malloc(numVertice * sizeof(float));
         if (matriz[i] == NULL) {
             printf("Erro na alocação de memória.");
             return;
@@ -70,10 +70,11 @@ void matrizAdjancenciaComPeso(FILE *arquivo)
     {
         for(int i=0; i<numVertice; i++)
         {
-            int origem, destino, peso;
+            int origem, destino;
+            float peso;
             for(int j=0; j<numVertice; j++)
             {
-                fscanf(arquivo, "%d %d %d", &origem, &destino, &peso);
+                fscanf(arquivo, "%d %d %f", &origem, &destino, &peso);
                 matriz[origem-1][destino-1] = peso;
                 matriz[destino-1][origem-1] = peso;
             }
@@ -84,7 +85,7 @@ void matrizAdjancenciaComPeso(FILE *arquivo)
         {
             for(int j=0; j<numVertice; j++)
             {
-                printf("%d\t", matriz[i][j]);
+                printf("%.1f\t", matriz[i][j]);
             }
             printf("\n");
         }

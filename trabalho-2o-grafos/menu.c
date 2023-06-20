@@ -14,7 +14,7 @@ void menu()
         printf("2 - Para representar um grafo.\n");
         printf("3 - Para percorrer um grafo.\n");
         printf("4 - Para descobrir os componentes conexos de um respectivo grafo.\n");
-
+        printf("5 - Para descobrir a distancia e o caminho minimo em um grafo.\n");
         scanf("%i", &x);
 
         switch(x)
@@ -44,6 +44,12 @@ void menu()
             }
             case 4:
             {
+                escolherGrafoComponenteConexo();
+                break;
+            }
+            case 5:
+            {
+                escolherGrafoDistancia();
                 break;
             }
             default:
@@ -56,5 +62,5 @@ void menu()
             }
         }
 
-    } while (x<0 || x>4);
+    } while (x<0 || x>5);
 }

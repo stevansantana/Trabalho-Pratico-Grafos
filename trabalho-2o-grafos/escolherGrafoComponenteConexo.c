@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void escolherGrafoRepresentacao()
+void escolherGrafoComponenteConexo()
 {
     system("cls");
     int x;
 
     do
     {
-        printf("\t\t\t\t\t\tMENU - ESCOLHA DE GRAFOS\n");
+        printf("\t\t\t\t\t\tMENU - ESCOLHA DE GRAFOS PARA COMPONENTES CONEXOS\n");
         printf("Aperte:\n\n");
         printf("0 - Para sair da representacao de grafos e finalizar o programa.\n");
-        printf("1 - Para representar o grafo_1.txt.\n");
-        printf("2 - Para representar o grafo_2.txt.\n");
-        printf("3 - Para representar o grafo_3.txt.\n");
-        printf("4 - Para representar o grafo_4.txt.\n");
-        printf("5 - Para representar o grafo-teste.txt.\n");
+        printf("1 - Para descobrir os componentes conexos do grafo_1.txt.\n");
+        printf("2 - Para descobrir os componentes conexos do grafo_2.txt.\n");
+        printf("3 - Para descobrir os componentes conexos do grafo_3.txt.\n");
+        printf("4 - Para descobrir os componentes conexos do grafo_4.txt.\n");
+        printf("5 - Para descobrir os componentes conexos do grafo-teste.txt.\n");
 
         scanf("%i", &x);
 
@@ -37,7 +37,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo1 != NULL)
                 {
-                    escolherModoRepresentacao(grafo1);
+                    grafoComponenteConexo(grafo1);
                 }
                 else
                 {
@@ -56,7 +56,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo2 != NULL)
                 {
-                    escolherModoRepresentacao(grafo2);
+                    grafoComponenteConexo(grafo2);
                 }
                 else
                 {
@@ -75,7 +75,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo3 != NULL)
                 {
-                    escolherModoRepresentacao(grafo3);
+                    grafoComponenteConexo(grafo3);
                 }
                 else
                 {
@@ -94,7 +94,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafo4 != NULL)
                 {
-                    escolherModoRepresentacao(grafo4);
+                    grafoComponenteConexo(grafo4);
                 }
                 else
                 {
@@ -113,7 +113,7 @@ void escolherGrafoRepresentacao()
 
                 if(grafoTeste != NULL)
                 {
-                    escolherModoRepresentacao(grafoTeste);
+                    grafoComponenteConexo(grafoTeste);
                 }
                 else
                 {
@@ -135,5 +135,6 @@ void escolherGrafoRepresentacao()
             }
         }
     } while (x<0 || x>5);
-
 }
+
+

@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
-void buscaEmProfundidadeAux(int vertice, int **matriz, bool *visitados, int *niveis, int *pais, int numVertices, FILE *arquivoSaida)
+void buscaEmProfundidadeAux(int vertice, int **matriz, int *visitados, int *niveis, int *pais, int numVertices, FILE *arquivoSaida)
 {
-    visitados[vertice] = true;
+    visitados[vertice] = 1;
 
     for (int i = 0; i < numVertices; i++)
     {
@@ -12,7 +11,7 @@ void buscaEmProfundidadeAux(int vertice, int **matriz, bool *visitados, int *niv
         {
             niveis[i] = niveis[vertice] + 1;
             pais[i] = vertice;
-            fprintf(arquivoSaida, "Vertice: %d - Nivel: %d - Pai: %d\n", i, niveis[i], vertice);
+            fprintf(arquivoSaida, "Vértice: %d - Nível: %d - Pai: %d\n", i, niveis[i], vertice);
             buscaEmProfundidadeAux(i, matriz, visitados, niveis, pais, numVertices, arquivoSaida);
         }
     }
@@ -23,11 +22,6 @@ void buscaEmProfundidade(FILE *arquivo)
     // Pegar o número de vértices do arquivo
     int numVertices = 0;
     fscanf(arquivo, "%d", &numVertices);
-
-    // Ler o vértice inicial para a busca
-    int verticeInicial = 0;
-    printf("Digite o vertice inicial para a busca em profundidade: ");
-    scanf("%d", &verticeInicial);
 
     // Alocar matriz de adjacência
     int **matriz = (int **)malloc(numVertices * sizeof(int *));
@@ -41,9 +35,9 @@ void buscaEmProfundidade(FILE *arquivo)
     }
 
     // Vetor de visitados
-    bool *visitados = (bool *)malloc(numVertices * sizeof(bool));
+    int *visitados = (int *)malloc(numVertices * sizeof(int));
     for (int i = 0; i < numVertices; i++)
-        visitados[i] = false;
+        visitados[i] = 0;
 
     // Vetor de níveis
     int *niveis = (int *)malloc(numVertices * sizeof(int));
@@ -63,7 +57,12 @@ void buscaEmProfundidade(FILE *arquivo)
     }
 
     fprintf(arquivoSaida, "\nBusca em Profundidade:\n");
-    fprintf(arquivoSaida, "Vértice: %d - Nível: 0 - Pai: -\n", verticeInicial);
+
+    int verticeInicial;
+    printf("Digite o vertice inicial para a busca em profundidade: ");
+    scanf("%d", &verticeInicial);
+
+    fprintf(arquivoSaida, "Vertice: %d - Nível: 0 - Pai: -\n", verticeInicial);
 
     buscaEmProfundidadeAux(verticeInicial, matriz, visitados, niveis, pais, numVertices, arquivoSaida);
 
@@ -75,8 +74,4 @@ void buscaEmProfundidade(FILE *arquivo)
         free(matriz[i]);
     free(matriz);
 }
-
-
-
-
 

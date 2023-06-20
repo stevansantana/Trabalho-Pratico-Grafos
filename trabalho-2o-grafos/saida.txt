@@ -316,3 +316,17 @@ Vértice: 96 - Nível: 11 - Pai: 11
 Vértice: 97 - Nível: 11 - Pai: 11
 Vértice: 98 - Nível: 11 - Pai: 11
 Vértice: 99 - Nível: 11 - Pai: 11
+
+Busca em Profundidade:
+Vertice: 3 - Nível: 0 - Pai: -
+Vértice: 0 - Nível: 0 - Pai: 3
+Vértice: 1 - Nível: 1 - Pai: 0
+Vértice: 2 - Nível: 2 - Pai: 1
+Vértice: 4 - Nível: 3 - Pai: 2
+
+Busca em Largura:
+Vértice: 2 - Nível: 0 - Pai: -
+Vértice: 0 - Nível: 1 - Pai: 2
+Vértice: 4 - Nível: 1 - Pai: 2
+Vértice: 1 - Nível: 2 - Pai: 0
+Vértice: 3 - Nível: 2 - Pai: 0

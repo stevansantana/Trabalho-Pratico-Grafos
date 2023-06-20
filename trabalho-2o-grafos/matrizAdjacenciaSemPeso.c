@@ -76,7 +76,7 @@ void matrizAdjancenciaSemPeso(FILE *arquivo)
         {
             for(int j=0; j<numVertice; j++)
             {
-                printf("\t%d\t", matriz[i][j]);
+                printf("%d\t", matriz[i][j]);
             }
             printf("\n");
         }
@@ -99,13 +99,11 @@ void matrizAdjancenciaSemPeso(FILE *arquivo)
         {
             for(int j=0; j<numVertice; j++)
             {
-                printf("\t%d\t", matriz[i][j]);
+                printf("%d\t", matriz[i][j]);
             }
             printf("\n");
         }
     }
-
-
 
     free(matriz);
     fclose(arquivo);
