@@ -70,7 +70,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687149102 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhermodorepresentacao.c
+1687188104 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhermodorepresentacao.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -82,7 +82,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687136227 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\listaadjacenciacompeso.c
+1687262706 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\listaadjacenciacompeso.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -97,12 +97,12 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687207935 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciacompeso.c
+1687262666 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciacompeso.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1687285579 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\menu.c
+1687291920 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\menu.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -110,11 +110,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1687136458 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafocompeso.c
+1687261224 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\lergrafocompeso.c
 	<stdio.h>
 	<stdlib.h>
 
-1687136537 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciasempeso.c
+1687257290 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\matrizadjacenciasempeso.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -156,6 +156,10 @@
 	<stdlib.h>
 
 1687291744 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\distanciatodosdijkstra.c
+	<stdio.h>
+	<stdlib.h>
+
+1687219798 source:c:\users\caio\documents\grafos\trabalho-pratico-grafos\trabalho-2o-grafos\escolhergrafocomponenteconexo.c
 	<stdio.h>
 	<stdlib.h>
 

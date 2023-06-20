@@ -58,6 +58,9 @@
 		<Unit filename="escolherGrafoBusca.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="escolherGrafoComponenteConexo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="escolherGrafoDistancia.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -71,6 +74,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="escolherParesTodosMST.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grafoComponenteConexo.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lerGrafo.c">
